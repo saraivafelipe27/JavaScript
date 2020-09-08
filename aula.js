@@ -86,9 +86,9 @@
 // let nome = 'júlia';
 
 // if (nome === 'júlia'){
-//    console.log('amor do papai')
+//    console.log('teste')
 // } else {
-//    console.log('não é amor do papai!')
+//    console.log('error!')
 // }
 
 // let difficulty;
@@ -692,16 +692,47 @@
 // console.log(resultado.join('_'));
 
 
-function verificarEntrada(){
-   let nomeConvidado = document.getElementById('nomeConv').value;
-   let donoFesta = document.getElementById('donoDafesta').value;
-   let convidadosFelipe = ['Júlia', 'Milane', 'João', 'Maria', 'Gustavo'];
+// function verificarEntrada(){
+//    let nomeConvidado = document.getElementById('nomeConv').value;
+//    let donoFesta = document.getElementById('donoDafesta').value;
+//    let convidadosFelipe = ['Júlia', 'Milane', 'João', 'Maria', 'Gustavo'];
    
 
 
-   if (convidadosFelipe.includes(nomeConvidado) && donoFesta === 'Felipe') {
-      document.getElementById('permicaoentrada').innerText = 'Entrada permitida, boa festa!';
-   } else {
-      document.getElementById('permicaoentrada').innerText = 'Entrada negada, you are not on the list';
+//    if (convidadosFelipe.includes(nomeConvidado) && donoFesta === 'Felipe') {
+//       document.getElementById('permicaoentrada').innerText = 'Entrada permitida, boa festa!';
+//    } else {
+//       document.getElementById('permicaoentrada').innerText = 'Entrada negada, you are not on the list';
+//    }
+// }
+
+
+// // requisitions AJAX 
+
+// const xhr = new XMLHttpRequest();
+
+// xhr.open('GET', 'https://api.github.com/users/saraivafelipe27');
+// xhr.send(null);
+
+// xhr.onreadystatechange = function() {
+//    if (xhr.readyState === 4) {
+//       console.log(JSON.parse(xhr.responseText));
+//    }
+// }
+
+
+
+
+
+
+const xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://api.github.com/users/saraivafelipe27');
+xhr.send(null);
+
+
+xhr.onreadystatechange = function() {
+   if(xhr.readyState === 4) {
+      console.log(JSON.parse(xhr.responseText));
    }
 }
