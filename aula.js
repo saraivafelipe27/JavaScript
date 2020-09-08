@@ -737,32 +737,53 @@
 
 
 
-// // PROMISES
+// // PROMISES 
 
 
-var minhaPromise = function() {
-   return new Promise(function(resolve, reject) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://api.github.com/users/saraivafelipe27');
-      xhr.send(null);
 
-      xhr.onreadystatechange = function() {
-         if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-               resolve(JSON.parse(xhr.responseText));
-            } else {
-               reject('Erro na requisição');
-            }
-         }
-      }
-   })
-}
+const minhaPromise = () => new Promise((resolve, reject) => {
+   setTimeout(() => { resolve('Ok') }, 2000);
+})  
+
+minhaPromise().then(response => {
+   console.log(response);
+})
+
+// var minhaPromise = function() {
+//    return new Promise(function(resolve, reject) {
+//       var xhr = new XMLHttpRequest();
+//       xhr.open('GET', 'https://api.github.com/users/saraivafelipe27');
+//       xhr.send(null);
+
+//       xhr.onreadystatechange = function() {
+//          if (xhr.readyState === 4) {
+//             if (xhr.status === 200) {
+//                resolve(JSON.parse(xhr.responseText));
+//             } else {
+//                reject('Erro na requisição');
+//             }
+//          }
+//       }
+//    })
+// }
 
 
-minhaPromise()
-   .then(function(response){
-      console.log(response);
-   })
-   .catch(function(error){
-      console.warn(error);
-   });
+// minhaPromise()
+//    .then(function(response){
+//       console.log(response);
+//    })
+//    .catch(function(error){
+//       console.warn(error);
+//    });
+
+
+// // Utilizando AXIOS
+
+// axios.get('https://api.github.com/users/saraivafelipe')
+//    .then(function(response){
+//       console.log(response);
+//    })
+//    .catch(function(error){
+//       console.warn(error);
+//    });
+
