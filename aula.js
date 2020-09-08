@@ -740,14 +740,35 @@
 // // PROMISES 
 
 
+const myPromise = () => new Promise((response, reject) => {
+   setTimeout(() => { response('T E S T E >>>') }, 3000);
+})
 
-const minhaPromise = () => new Promise((resolve, reject) => {
-   setTimeout(() => { resolve('Ok') }, 2000);
-})  
 
-minhaPromise().then(response => {
+myPromise().then(response => {
    console.log(response);
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // var minhaPromise = function() {
 //    return new Promise(function(resolve, reject) {
