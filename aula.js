@@ -740,30 +740,14 @@
 // // PROMISES 
 
 
-const myPromise = () => new Promise((response, reject) => {
-   setTimeout(() => { response('T E S T E >>>') }, 3000);
-})
+// const myPromise = () => new Promise((resolve, reject) => {
+//    setTimeout(() => { resolve('T E S T E >>>') }, 3000);
+// })
 
 
-myPromise().then(response => {
-   console.log(response);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// myPromise().then(response => {
+//    console.log(response);
+// })
 
 
 
@@ -807,4 +791,11 @@ myPromise().then(response => {
 //    .catch(function(error){
 //       console.warn(error);
 //    });
+
+
+
+
+
+// // Async Await  
+
 
